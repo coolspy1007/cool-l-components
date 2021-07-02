@@ -4,7 +4,7 @@ node_js:
 deploy:
   provider: npm
   skip_cleanup: false
-  email: 'coolspy@qq.com'
-  api_key: "sds"
+  email: 'coolspy107@gmail.com'
+  api_key: "7f0cc424-fd44-443b-b7f9-a1702f37f1b8"
   on:
     tags: true
