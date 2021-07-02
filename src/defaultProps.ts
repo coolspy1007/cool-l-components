@@ -112,13 +112,6 @@ export const shapeDefaultProps: ShapeComponentProps = {
   ...commonDefaultProps
 }
 
-// 是否可编辑
-export const isEditingProp = {
-  isEditing: {
-    type: Boolean,
-    default: false
-  }
-}
 
 /**
  * _.without(array, [values])
@@ -131,20 +124,18 @@ export const isEditingProp = {
 //剔除 LText 组件非样式属性的key
 export const textStylePropNames = without(
   Object.keys(textDefaultProps),
-  'actionType',
-  'url',
-  'text'
+  'actionType', 'url', 'text'
 )
 
 //剔除 LImage 组件非样式属性的key
 export const imageStylePropNames = without(
   Object.keys(imageDefaultProps),
-  'src'
+  'actionType', 'url', 'src'
 )
 
 //剔除 LShape 组件非样式属性的key
 export const shapeStylePropsNames = without(
-  Object.keys(imageDefaultProps),
+  Object.keys(shapeDefaultProps),
   'actionType', 'url'
 )
 /**
@@ -168,8 +159,19 @@ export const shapeStylePropsNames = without(
       type: String
     },
  */
-export const transformToComponentProps = (props: TextComponentProps | ImageComponentProps | ShapeComponentProps) => {
-  return mapValues(props, item => {
+
+// 是否正在编辑，编辑中不执行任何 action
+export const isEditingProp = {
+  isEditing: {
+    type: Boolean,
+    default: false
+  }
+}
+
+// 组件属性的联合类型
+export type ComponentProps = TextComponentProps | ImageComponentProps | ShapeComponentProps
+export const transformToComponentProps = (props: ComponentProps) => {
+  const mapProps = mapValues(props, item => {
     // console.log('!------------')
     // console.log(item.constructor as StringConstructor)
     // console.log('------------!')
@@ -177,5 +179,8 @@ export const transformToComponentProps = (props: TextComponentProps | ImageCompo
       type: item.constructor as StringConstructor,
       default: item
     }
+
   })
+
+  return { ...mapProps, ...isEditingProp }
 }

@@ -1,9 +1,9 @@
-import { TextComponentProps } from '@/defaultProps'
+import { ComponentProps } from '@/defaultProps'
 import { pick } from 'lodash-es'
 import { computed } from 'vue'
 
 const useComponentCommon = (
-  props: Readonly<Partial<TextComponentProps>>,
+  props: Readonly<Partial<ComponentProps & { isEditing: boolean }>>,
   picks: string[]
 ) => {
   /**
@@ -17,7 +17,8 @@ const useComponentCommon = (
    */
   const styleProps = computed(() => pick(props, picks))
   const handleClick = () => {
-    if (props.actionType === 'url' && props.url) {
+    // 如果 actionType=url 并且 url 有值， 不是在编辑的情况下 可以跳转
+    if (props.actionType === 'url' && props.url && !props.isEditing) {
       window.location.href = props.url
     }
   }
