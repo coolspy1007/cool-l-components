@@ -1,3 +1,10 @@
 language: node_js
 node_js:
   - node
+deploy:
+  provider: npm
+  skip_cleanup: false
+  email: 'coolspy@qq.com'
+  api_key: "sds"
+  on:
+    tags: true
