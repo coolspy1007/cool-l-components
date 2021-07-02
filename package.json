@@ -2,7 +2,7 @@
   "name": "cool-l-components",
   "version": "1.0.3",
   "private": false,
-  "author": "coolspy1007",
+  "author": "coolspy107",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
