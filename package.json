@@ -1,8 +1,8 @@
 {
   "name": "cool-l-components",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "private": false,
-  "author": "coolspy107",
+  "author": "coolspy",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
@@ -58,7 +58,7 @@
   "peerDependencies": {
     "vue": "^3.0.0"
   },
-  "homepage": "https://github.com/coolspy1007/cool-l-components",
+  "homepage": "https://github.com/coolspy1007/cool-components",
   "keywords": [
     "Component",
     "UI",
@@ -67,7 +67,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coolspy1007/cool-l-components"
+    "url": "https://github.com/coolspy1007/cool-components"
   },
   "types": "dist/index.d.ts"
 }

@@ -1,10 +1,11 @@
 language: node_js
 node_js:
-  - node
+- node
 deploy:
   provider: npm
   skip_cleanup: false
-  email: 'coolspy107@gmail.com'
-  api_key: "7f0cc424-fd44-443b-b7f9-a1702f37f1b8"
+  email: coolspy107@gmail.com
+  api_key:
+    secure: vB3Fptgh7YK3OhlAPQf0dVGHMjyrtH1ytuP4nLQn/SQVhm/hDL1sZTfjcDRz5QbprtKDXQrKXmPHcemxtMr2zDDqEN3K7tUtRRU9JoQBL2p7nRShjwo3uvHqTha2OrWIF6ZzXF6LyNkrjyaPKzdQHXB5fiIAFj9p/1i9slfpaXa/S6YZFkfKrgTM3i1PVtScB0o6PfwnYOY6reQZbCj62dOVbbxY0ifU0lXL314Oqu//eiid0UuUA7O1Mw94JGQOKC3QUwpK4lZJajKEFQsHLlTh6bg+NTY166tq2wt7vFOj5JQ2H6qAz8M6HaOBpNNNUZcEOzmX1/NF0motwG0pIy/Qc7sylfnnnKWHKpcrtyqJ75+UgKvqVPnpLzAk7L5MsAkVfsUn/HyAq0XZhUNfW2OemvxrNGcMQHcL13WcGOjAInJtk+SLrKDCaHTTrx4uSHq57xtvS6bDIg5snl9UQG9Sw6gP7G4RsS7NDivfEND3qljDzYL67eVD0xfnSO4/5H0i9cpTeAlXuL5mIWOulwgUSvpN8ggZJL4aPY1bHL3o4xY/V/1xCPgB66dJGhiIRLL5uhNWeau+AfrojZ2R6D68X3edXrQ6lT9mKUPTnEhAE++D2lT3lXIdX/74Vd9cW7o2b9pXwPEsgQUu+XLuEhmTh/bkuiNlfic3Z8qtajU=
   on:
     tags: true
