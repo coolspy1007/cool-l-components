@@ -11,7 +11,10 @@ export {
   TextComponentProps,
   ImageComponentProps,
   ShapeComponentProps,
-} from '@/defaultProps'
+  imageDefaultProps,
+  textDefaultProps,
+  shapeDefaultProps,
+} from './defaultProps'
 
 const components = [
   LText,
