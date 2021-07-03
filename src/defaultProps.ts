@@ -53,7 +53,7 @@ export interface ShapeComponentProps extends CommonComponentProps {
   backgroundColor: string;
 }
 
-export type AllComponentProps = TextComponentProps & ImageComponentProps & ShapeComponentProps
+export type AllComponentProps = TextComponentProps & ImageComponentProps & ShapeComponentProps & { isEditing: boolean }
 
 //公有默认属性
 export const commonDefaultProps: CommonComponentProps = {

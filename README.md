@@ -1,8 +1,8 @@
-# cool-components
+# cool-l-components
 
-#### introduce
+#### 介绍
 UI element components for Vue 3
 
-#### install
-`npm install cool-component`
+#### 安裝
+`npm install cool-l-component`
  

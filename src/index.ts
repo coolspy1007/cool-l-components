@@ -14,6 +14,7 @@ export {
   imageDefaultProps,
   textDefaultProps,
   shapeDefaultProps,
+  AllComponentProps
 } from './defaultProps'
 
 const components = [
